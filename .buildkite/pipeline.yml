@@ -1,0 +1,12 @@
+name: Modules CFG
+slug: modules-cfg
+
+steps:
+  - name: check fmt
+    command: make check-fmt
+
+  - name: lint
+    command: make lint
+
+  - name: test
+    command: make test

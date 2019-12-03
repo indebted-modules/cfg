@@ -1,0 +1,7 @@
+name: Buildkite pipeline template
+slug: slug
+steps:
+  - label: ":pipeline:"
+    name: foo
+    slug: bar
+    command: buildkite-agent pipeline upload
