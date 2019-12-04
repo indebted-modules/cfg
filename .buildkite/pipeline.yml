@@ -12,9 +12,10 @@ steps:
       - docker-compose#v3.1.0:
           run: golint
           config: .buildkite/docker-compose.yml
-  # - name: test
-  #   command: make test
-  #   plugins:
-  #     - docker-compose#v3.1.0:
-  #         run: golang
-  #         config: .buildkite/docker-compose.yml
+
+  - name: test
+    command: make test
+    plugins:
+      - docker-compose#v3.1.0:
+          run: golang
+          config: .buildkite/docker-compose.yml
