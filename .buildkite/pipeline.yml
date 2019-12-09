@@ -1,21 +1,10 @@
 steps:
-  - name: check fmt
-    command: make check-fmt
-    plugins:
-      - docker-compose#v3.1.0:
-          run: golang
-          config: .buildkite/docker-compose.yml
-
-  - name: lint
-    command: make lint
-    plugins:
-      - docker-compose#v3.1.0:
-          run: golint
-          config: .buildkite/docker-compose.yml
-
   - name: test
-    command: make test
+    command:
+      - make check-fmt
+      - make lint
+      - make test
     plugins:
       - docker-compose#v3.1.0:
-          run: golang
+          run: test
           config: .buildkite/docker-compose.yml
