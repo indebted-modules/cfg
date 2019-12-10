@@ -5,6 +5,6 @@ steps:
       - make lint
       - make test
     plugins:
-      - docker-compose#v3.1.0:
-          run: test
-          config: .buildkite/docker-compose.yml
+      - docker#v3.3.0:
+          image: indebted-test
+          network: indebted-net
