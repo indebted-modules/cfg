@@ -1,6 +1,7 @@
 steps:
   - name: test
     command:
+      - make go-mod-verify
       - make check-fmt
       - make lint
       - make test
