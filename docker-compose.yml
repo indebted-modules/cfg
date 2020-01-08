@@ -7,3 +7,5 @@ services:
       - ./.tmp/go/pkg:/go/pkg
       - ./.tmp/go/cache:/.cache
       - ./.tmp/mmake:/usr/local/include/github.com
+    environment:
+      - DB_URL=db-url
